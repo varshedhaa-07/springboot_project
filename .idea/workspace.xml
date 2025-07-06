@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="97f20666-3438-4c66-a3b3-f4a6f943e25f" name="Changes" comment="">
+=======
+    <list default="true" id="3859f02a-871d-493b-aaac-e2ddd0d6847f" name="Changes" comment="">
+>>>>>>> ec8e8fbe5662bcd1e80440b240f003633b7988fd
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring1/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring1/.idea/.gitignore" beforeDir="false" />
@@ -63,15 +67,22 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
+<<<<<<< HEAD
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2zMmYjytwRBRpVMWByYGwkndAyz" />
+=======
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zLtRADL9N39QzgcRsiTVOX5V7q" />
+>>>>>>> ec8e8fbe5662bcd1e80440b240f003633b7988fd
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< HEAD
     &quot;Application.StudentspringprojectApplication.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -79,15 +90,31 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Java Full Stack/studentspringproject&quot;
+=======
+    &quot;Application.FirstspringprojectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java Full Stack/firstspringproject&quot;
+>>>>>>> ec8e8fbe5662bcd1e80440b240f003633b7988fd
   }
 }</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="97f20666-3438-4c66-a3b3-f4a6f943e25f" name="Changes" comment="" />
       <created>1751549365975</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751549365975</updated>
+=======
+      <changelist id="3859f02a-871d-493b-aaac-e2ddd0d6847f" name="Changes" comment="" />
+      <created>1751522171040</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751522171040</updated>
+>>>>>>> ec8e8fbe5662bcd1e80440b240f003633b7988fd
     </task>
     <servers />
   </component>
