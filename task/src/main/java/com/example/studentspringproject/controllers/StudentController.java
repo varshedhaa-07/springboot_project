@@ -1,5 +1,6 @@
 package com.example.studentspringproject.controllers;
 
+import com.example.studentspringproject.Services.StudentService;
 import com.example.studentspringproject.models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -7,26 +8,33 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/stu")
 public class StudentController {
     @Autowired
-    com.example.studentspringproject.Services.StudentService s;
+    private StudentService s;
+
     @GetMapping
-    public List<Student> getMethod(){
-        return s.getMethod();
+    public List<Student> getStudent(){
+        return s.getStudent();
     }
 
-    @PostMapping("/")
-    public void postMethod(@RequestBody Student stu){
-         s.postMethod(stu);
+    @GetMapping("/{id}")
+    public Student getStudentById(@PathVariable int id){
+        return s.getStudentById(id);
+    }
+
+    @PostMapping
+    public String addStudent(@RequestBody Student stu){
+         return s.addStudent(stu);
     }
 
     @PutMapping
-    public String putMethod(){
-        return s.putMethod();
+    public String updateStudent(@RequestBody Student stu){
+        return s.updateStudent(stu);
     }
 
-    @DeleteMapping
-    public String deleteMethod(){
-        return s.deleteMethod();
+    @DeleteMapping("/{id}")
+    public String deleteStudent(@PathVariable int id){
+        return s.deleteStudent(id);
     }
 }
