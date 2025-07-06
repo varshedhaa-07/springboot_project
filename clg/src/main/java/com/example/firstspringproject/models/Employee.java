@@ -18,6 +18,10 @@ public class Employee {
         this.Job=Job;
     }
 
+    public Employee() {
+
+    }
+
     public int getEmpId() {
         return EmpId;
     }
