@@ -23,17 +23,17 @@ public class HelloWorldController {
     }
 
     @PostMapping
-    public void postMethod(@RequestBody Employee emp){
-        hws.postMethod(emp);
+    public String postMethod(@RequestBody Employee emp){
+        return hws.addEmployee(emp);
     }
 
     @PutMapping
     public String putMethod(@RequestBody Employee employee){
-        return hws.putMethod(employee);
+        return hws.updateEmployee(employee);
     }
 
     @DeleteMapping("/{EmpId}")
     public String deleteMethod(@PathVariable int EmpId){
-        return hws.deleteMethod(EmpId);
+        return hws.deleteEmployee(EmpId);
     }
 }
