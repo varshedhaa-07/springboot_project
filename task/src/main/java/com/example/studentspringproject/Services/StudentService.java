@@ -1,6 +1,8 @@
 package com.example.studentspringproject.Services;
 
 import com.example.studentspringproject.models.Student;
+import com.example.studentspringproject.repository.StudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,20 +11,30 @@ import java.util.List;
 
 @Service
 public class StudentService {
-    List<Student> st = new ArrayList<>(Arrays.asList(new Student(1,"Ram",90),new Student(2,"John",75)));
+
+    @Autowired
+    StudentRepository stuRepo;
     public List<Student> getMethod(){
-        return st;
+        return stuRepo.findAll();
     }
 
-    public void postMethod(Student stu) {
-        st.add(stu);
+    public Student getStudentById(int id) {
+        return stuRepo.findById(id).orElse(new Student());
     }
 
-    public String putMethod() {
-        return "This is put method";
+    public String addStudent(Student stu) {
+        stuRepo.save(stu);
+        return "Student Added successfully";
     }
 
-    public String deleteMethod() {
-        return "This is delete method";
+    public String updateStudent(Student stu) {
+        stuRepo.save(stu);
+        return "Student Updated successfully";
     }
+
+    public String deleteStudent(int id) {
+        stuRepo.deleteById(id);
+        return "Student Deleted successfully";
+    }
+
 }

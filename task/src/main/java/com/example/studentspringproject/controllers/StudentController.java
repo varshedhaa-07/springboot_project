@@ -1,6 +1,7 @@
 package com.example.studentspringproject.controllers;
 
 import com.example.studentspringproject.models.Student;
+import com.example.studentspringproject.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,18 +16,23 @@ public class StudentController {
         return s.getMethod();
     }
 
+    @GetMapping("/{EmpId}")
+    public Student getStudentById(@PathVariable int id){
+        return s.getStudentById(id);
+    }
+
     @PostMapping("/")
-    public void postMethod(@RequestBody Student stu){
-         s.postMethod(stu);
+    public String addStudent(@RequestBody Student stu){
+          return s.addStudent(stu);
     }
 
     @PutMapping
-    public String putMethod(){
-        return s.putMethod();
+    public String updateStudent(@RequestBody Student stu){
+        return s.updateStudent(stu);
     }
 
     @DeleteMapping
-    public String deleteMethod(){
-        return s.deleteMethod();
+    public String deleteStudent(@PathVariable int id){
+        return s.deleteStudent(id);
     }
 }
