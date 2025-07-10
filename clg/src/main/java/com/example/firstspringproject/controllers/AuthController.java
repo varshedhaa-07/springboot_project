@@ -1,8 +1,10 @@
 package com.example.firstspringproject.controllers;
 
 import com.example.firstspringproject.models.RegisterDetails;
+import com.example.firstspringproject.models.UserDetailsDto;
 import com.example.firstspringproject.services.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,17 +16,12 @@ public class AuthController {
     @Autowired
     AuthService  authService;
 
-    @GetMapping
-    public List<RegisterDetails> getRegisteredUsers(){
-        return authService.getRegisteredUsers();
-    }
-
     @PostMapping("/register")
-    public String addNewUser(@RequestBody RegisterDetails register){
-       return authService.addNewEmployee(register);
+    public String addNewUser(@RequestBody UserDetailsDto register){
+        return authService.addNewEmployee(register);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public String Login(@RequestBody RegisterDetails login){
         return authService.authenticate(login);
     }
