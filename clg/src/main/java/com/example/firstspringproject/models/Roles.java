@@ -8,20 +8,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class userDetails {
+public class Roles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int empId;
-    private String empName;
-    private String email;
-    private String password;
-    private String gender;
-    private Date DOB;
-    private String role;
+    private int roleId;
+    private String roleName;
 }
