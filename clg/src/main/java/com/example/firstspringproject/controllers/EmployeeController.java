@@ -5,6 +5,7 @@ import com.example.firstspringproject.models.UserDetailsDto;
 import com.example.firstspringproject.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,13 +42,13 @@ public class EmployeeController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/employee")
-    public String postMethod(@RequestBody RegisterDetails employee){
+    public String postMethod(@RequestBody UserDetailsDto employee){
         return employeeService.addEmployee(employee);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/employee/{empId}")
-    public String putMethod(@PathVariable int empId,@RequestBody RegisterDetails details){
+    public String putMethod(@PathVariable int empId,@RequestBody UserDetailsDto details){
         return employeeService.updateEmployee(empId,details);
     }
 
